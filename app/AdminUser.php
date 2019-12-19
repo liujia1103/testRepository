@@ -9,6 +9,8 @@ class AdminUser extends Authenticatable
 {
     use Notifiable;
 
+    protected $rememberTokenName = '';
+
     /**
      * The attributes that are mass assignable.
      *

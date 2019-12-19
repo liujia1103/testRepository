@@ -23,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
             $view->with('user', $user);
         });
 
+        \View::composer('admin.layout.nav', function($view){
+            $admin = \Auth::admin();
+            $view->with('admin', $admin);
+        });
+
         \View::composer('layout.sidebar', function($view){
             $topics = \App\Topic::all();
             $view->with('topics', $topics);

@@ -22,11 +22,11 @@ class LoginController extends Controller
         ]);
 
         $user = request(['name', 'password']);
-//        if (true == \Auth::guard('admin')->attempt($user)) {
+        if (true == \Auth::guard('admin')->attempt($user)) {
             return redirect('/admin/home');
-//        }
+        }
 
-//        return \Redirect::back()->withErrors("用户名密码错误");
+        return \Redirect::back()->withErrors("用户名密码错误");
     }
 
     /*

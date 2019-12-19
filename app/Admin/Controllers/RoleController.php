@@ -69,7 +69,7 @@ class RoleController extends Controller
         foreach ($deletePermissions as $permission) {
             $role->deletePermission($permission);
         }
-        return back();
+        return redirect("/admin/roles");
     }
 
 }

@@ -21,7 +21,7 @@ Route::group(['middleware' => 'auth:web'], function(){
     Route::get('/posts/{post}', '\App\Http\Controllers\PostController@show');
     Route::get('/posts/{post}/edit', '\App\Http\Controllers\PostController@edit');
     Route::put('/posts/{post}', '\App\Http\Controllers\PostController@update');
-    Route::post('/posts/img/upload', '\App\Http\Controllers\PostController@imageUpload');
+    Route::post('/posts/{img}/upload', '\App\Http\Controllers\PostController@imageUpload');
     Route::post('/posts/comment', '\App\Http\Controllers\PostController@comment');
     Route::get('/posts/{post}/zan', '\App\Http\Controllers\PostController@zan');
     Route::get('/posts/{post}/unzan', '\App\Http\Controllers\PostController@unzan');
